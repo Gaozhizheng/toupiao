@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抖音调查问卷</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="survey-card">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            <div id="connection-status" class="connection-status"></div>
+            <h2 class="question">你认为做抖音最难的是哪方面？</h2>
+            <form id="survey-form">
+                <div class="username-container">
+                    <div class="username-input-group">
+                        <label for="username">昵称：</label>
+                        <input type="text" id="username" name="username" placeholder="请输入昵称" value="" readonly>
+                        <button type="button" id="change-username-btn" class="change-username-btn" title="修改用户名">
+                            修改
+                        </button>
+                    </div>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option1" name="difficulty" value="不好意思露脸出镜">
+                    <label for="option1">不好意思露脸出镜</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option2" name="difficulty" value="不会剪辑视频">
+                    <label for="option2">不会剪辑视频</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option3" name="difficulty" value="不知道该发什么内容">
+                    <label for="option3">不知道该发什么内容</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option4" name="difficulty" value="词穷，不会写文案">
+                    <label for="option4">词穷，不会写文案</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option5" name="difficulty" value="没灵感，不会变视频脚本">
+                    <label for="option5">没灵感，不会变视频脚本</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option6" name="difficulty" value="不会拍摄">
+                    <label for="option6">不会拍摄</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="option7" name="difficulty" value="不能持续更新">
+                    <label for="option7">不能持续更新</label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="submit-btn">提交</button>
+                    <button type="button" id="refresh-btn">刷新</button>
+                </div>
+            </form>
+            <div id="results" class="results hidden">
+                <h3>投票结果</h3>
+                <div class="result-bars"></div>
+                <button id="back-btn" style="display: none;">返回</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2025 抖音调查问卷 | 沙师兄AI</p>
+        </div>
+    </div>
+    <!-- 引入JavaScript文件 -->
+    <script src="api-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

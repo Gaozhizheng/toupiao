@@ -1,0 +1,36 @@
+# Development files
+node_modules
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database files
+*.sql
+mysql-config.js
+init-database.js
+manage-database.js
+test-connection.js
+
+# Scripts
+*.bat
+*.sh
+start.bat
+start-server.bat
+start-server.sh
+check-environment.bat
+check-environment.sh
+
+# Documentation
+*.md
+数据流转实现方案.md
+用户指南.md
+
+# Test files
+test-*.html
+test-*.js
+
+# Package lock (optional, but can reduce build size)
+package-lock.json
